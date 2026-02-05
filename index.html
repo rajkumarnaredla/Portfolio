@@ -1,88 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naredla Rajkumar | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajkumar Naredla | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
 </head>
+<body>
 
-<body class="light">
-
-<div id="progress"></div>
-<div class="cursor"></div>
-
-<header>
-  <h1>Naredla Rajkumar</h1>
-  <p class="typing"></p>
-
-  <div class="buttons">
-    <a href="Raj kumar Resume.pdf" download class="btn">Download Resume</a>
-    <button class="btn-outline" onclick="toggleTheme()">🌙</button>
-  </div>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo">RN.</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<section id="about" class="fade">
-  <h2>About Me</h2>
-  <p>
-    Frontend developer fresher with strong fundamentals in Java, React,
-    HTML, CSS and JavaScript. Passionate about creating animated and
-    responsive web applications.
-  </p>
+<!-- HERO -->
+<section id="home" class="hero reveal">
+  <div class="hero-container">
+
+    <div class="hero-left">
+      <div class="card3d">
+        <img src="images/profile.jpg" class="profile-pic" alt="Rajkumar">
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <h1>Hi, I'm <span class="accent">Rajkumar</span></h1>
+      <h2 class="typing"></h2>
+
+      <p>
+        Frontend Developer focused on building
+        modern, responsive, and animated web applications.
+      </p>
+
+      <div class="buttons">
+        <a href="Raj kumar Resume.pdf" download
+           class="btn glow-btn" id="resumeBtn">
+          📄 Download Resume
+        </a>
+
+        <button class="btn-outline" onclick="openResume()">
+          👁️ View Resume
+        </button>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="skills" class="fade">
+<!-- RESUME MODAL -->
+<div id="resumeModal" class="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-label="Resume">
+    <span class="close" onclick="closeResume()">&times;</span>
+    <iframe
+      src="Raj kumar Resume.pdf"
+      title="Rajkumar Resume"
+      frameborder="0"
+    ></iframe>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <div class="card3d about-card">
+    <h2>About Me</h2>
+    <p>
+      I am a frontend developer fresher with strong fundamentals in
+      HTML, CSS, JavaScript, React JS, and Java.
+      I enjoy creating visually appealing and interactive user experiences.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section dark reveal">
   <h2>Skills</h2>
   <div class="skills">
-    <span>Java</span>
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
     <span>React JS</span>
-    <span>GitHub</span>
+    <span>Java</span>
+    <span>Git & GitHub</span>
   </div>
 </section>
 
-<section id="projects" class="fade">
+<!-- PROJECTS -->
+<section id="projects" class="section reveal">
   <h2>Projects</h2>
 
-  <div class="card">
+  <div class="project-card">
     <h3>E-commerce</h3>
-    <p>Responsive e-commerce UI built using HTML, CSS, JavaScript & React.</p>
-    <a href="https://github.com/rajkumarnaredla/first-project/" target="_blank">
-      View Project →
+    <a href="https://rajkumarnaredla.github.io/e-commerce-/" target="_blank" rel="noopener" class="proj-link">
+      <img src="images/ecommerce.png" alt="E-commerce project thumbnail" class="project-img">
     </a>
+    <p>Responsive e-commerce UI using HTML, CSS, JavaScript, and React.</p>
+    <p><a href="https://github.com/rajkumarnaredla/" target="_blank" rel="noopener">View repository</a></p>
   </div>
 
-  <div class="card">
-    <h3>Stealthy Security</h3>
-    <p>Multi-image steganography system for secure data hiding.</p>
-  </div>
-</section>
+  <!-- EDUCATION -->
+  <section id="education" class="section reveal dark">
+    <h2>Education</h2>
+    <div class="education-list">
+      <div class="edu-item">
+        <h3>B.Tech (CSC) — Malla Reddy Engineering College &amp; Management Sciences, Hyderabad <span class="edu-date">June 2020 – July 2025</span></h3>
+        <p>Undergraduate program in Computer Science (CSC). Relevant coursework: Data Structures, Algorithms, Web Development.</p>
+      </div>
 
-<section id="contact" class="fade">
-  <h2>Contact</h2>
-  <p>📧 rajkumarnaredla42@gmail.com</p>
-  <p>📞 +91 9603460568</p>
-  <p>
-    <a href="https://github.com/rajkumarnaredla" target="_blank">GitHub</a> |
-    <a href="https://linkedin.com/in/rajkumar-naredla-920941324" target="_blank">LinkedIn</a>
-  </p>
-</section>
+      <div class="edu-item">
+        <h3>Intermediate (MPC) — Allphores Junior College, Karimnagar, Telangana <span class="edu-date">2018 – 2020</span></h3>
+        <p>Mathematics, Physics, Chemistry stream with strong foundation in problem solving and programming basics.</p>
+      </div>
 
-<footer>
-  <p>© 2026 Naredla Rajkumar</p>
-</footer>
+      <div class="edu-item">
+        <h3>Secondary School Certificate — Siddartha High School, Karimnagar, Telangana <span class="edu-date">March 2018</span></h3>
+        <p>Completed secondary school education with coursework in science and mathematics.</p>
+      </div>
+    </div>
+  </section>
 
-<script src="script.js"></script>
-</body>
-</html>
+  <!-- CONTACT -->
+  <section id="contact" class="section reveal">
+    <h2>Contact</h2>
 
+    <div class="contact-grid">
 
+      <div class="contact-card">
+        <h3>Get in touch</h3>
+        <p>Email: <a href="mailto:rajkumarnaredla42@gmail.com">rajkumarnaredla42@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919603460568">+91 96034 60568</a></p>
+        <p>Location: Karimnagar, Telangana</p>
+
+        <div class="socials">
+          <a href="https://github.com/rajkumarnaredla/" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/rajkumar-naredla-920941324/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+
+      <form class="contact-form" action="mailto:rajkumarnaredla42@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button class="btn" type="submit">Send Email</button>
+      </form>
+
+    </div>
+  </section>

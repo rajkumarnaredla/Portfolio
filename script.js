@@ -1,49 +1,70 @@
-/* Theme Toggle */
-function toggleTheme() {
-  document.body.classList.toggle("dark");
-  document.body.classList.toggle("light");
-}
+// Typing animation
+document.addEventListener("DOMContentLoaded", () => {
+  const text = "Frontend Developer | Java | React JS";
+  let index = 0;
+  const typingElement = document.querySelector(".typing");
 
-/* Typing Effect */
-const text = "Frontend Developer | Java | React JS";
-let index = 0;
-const typing = document.querySelector(".typing");
-
-function type() {
-  if (index < text.length) {
-    typing.innerHTML += text.charAt(index);
-    index++;
-    setTimeout(type, 80);
+  function type() {
+    if (!typingElement) return;
+    if (index < text.length) {
+      typingElement.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(type, 80);
+    }
   }
-}
-type();
-
-/* Scroll Progress */
-window.addEventListener("scroll", () => {
-  const scrollTop = document.documentElement.scrollTop;
-  const height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-
-  document.getElementById("progress").style.width =
-    (scrollTop / height) * 100 + "%";
+  type();
 });
 
-/* Fade In on Scroll */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+// Resume modal
+function openResume() {
+  const modal = document.getElementById("resumeModal");
+  if (!modal) return;
+  modal.style.display = "block";
+  modal.setAttribute("aria-hidden", "false");
+}
+
+function closeResume() {
+  const modal = document.getElementById("resumeModal");
+  if (!modal) return;
+  modal.style.display = "none";
+  modal.setAttribute("aria-hidden", "true");
+}
+
+// Scroll reveal
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
     }
   });
 });
 
-document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+// Project image fallback: replace broken images with a styled fallback card
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.project-img').forEach(img => {
+    img.addEventListener('error', () => {
+      try {
+        const link = img.closest('.proj-link');
+        const repoHref = link ? link.getAttribute('href') : '#';
 
-/* Cursor Glow */
-const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
+        const fallback = document.createElement('div');
+        fallback.className = 'project-fallback';
+        fallback.innerHTML = `<div><h4>E-commerce (demo)</h4><p>Click to open demo</p></div>`;
+
+        // Replace image with fallback wrapped in the same link
+        if (link) {
+          link.replaceChild(fallback, img);
+        } else {
+          img.replaceWith(fallback);
+        }
+
+        if (link && repoHref && repoHref !== '#') {
+          link.setAttribute('aria-label', 'Open project demo');
+        }
+      } catch (e) {
+        // silent fail
+      }
+    });
+  });
 });
-s
