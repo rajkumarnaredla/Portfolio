@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajkumar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gradient-bg" aria-hidden="true"></div>
+
+  <nav class="navbar">
+    <div class="logo">Rajkumar</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#resume-info">Resume Info</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="true" title="Switch theme">
+      <span class="theme-icon" aria-hidden="true">🌙</span>
+    </button>
+  </nav>
+
+  <section id="home" class="hero reveal">
+    <div class="hero-content glass">
+      <div class="hero-right">
+        <img src="profile.jpg" class="profile-img" alt="Rajkumar Naredla profile">
+      </div>
+      <div class="hero-left">
+        <h1>Rajkumar Naredla</h1>
+        <h2 class="typing"></h2>
+        <p>I’m a curious and passionate Frontend Developer fresher who genuinely enjoys building simple, clean, and user-friendly websites while learning something new every day.</p>
+        <div class="resume-actions">
+          <a href="Raj kumar Resume (2).pdf" download class="btn">Download Resume</a>
+          <a href="Raj kumar Resume (2).pdf" target="_blank" rel="noopener" class="btn">View Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume-info" class="section reveal">
+    <h2>Resume Information</h2>
+    <div class="resume-layout glass">
+      <div class="info-icons" role="tablist" aria-label="Resume info tabs">
+        <button class="icon-tab active" data-target="about-panel" role="tab" aria-selected="true" title="About"><span>👤</span><small>About</small></button>
+        <button class="icon-tab" data-target="skills-panel" role="tab" aria-selected="false" title="Skills"><span>🛠</span><small>Skills</small></button>
+        <button class="icon-tab" data-target="education-panel" role="tab" aria-selected="false" title="Education"><span>🎓</span><small>Education</small></button>
+        <button class="icon-tab" data-target="projects-panel" role="tab" aria-selected="false" title="Projects"><span>🧩</span><small>Projects</small></button>
+        <button class="icon-tab" data-target="contact-panel" role="tab" aria-selected="false" title="Contact"><span>✉</span><small>Contact</small></button>
+      </div>
+
+      <div class="info-content" aria-live="polite">
+        <article id="about-panel" class="info-panel active" role="tabpanel">
+          <h3>About Me</h3>
+          <p>Passionate Frontend Developer skilled in Java, React JS and modern web technologies. I build responsive and interactive applications with clean UI and smooth animations.</p>
+        </article>
+        <article id="skills-panel" class="info-panel" role="tabpanel" hidden>
+          <h3>Core Skills</h3>
+          <div class="skills-logo-grid">
+            <div class="skill-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo">
+              <span>HTML5</span>
+            </div>
+            <div class="skill-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo">
+              <span>CSS3</span>
+            </div>
+            <div class="skill-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo">
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React logo">
+              <span>React</span>
+            </div>
+            <div class="skill-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo">
+              <span>Java</span>
+            </div>
+            <div class="skill-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo">
+              <span>Git</span>
+            </div>
+            <div class="skill-logo-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo">
+              <span>GitHub</span>
+            </div>
+          </div>
+        </article>
+        <article id="education-panel" class="info-panel" role="tabpanel" hidden>
+          <h3>Education</h3>
+          <p>Bachelor's degree background in technology-focused studies with practical web development projects and hands-on software engineering work.</p>
+        </article>
+        <article id="projects-panel" class="info-panel" role="tabpanel" hidden>
+          <h3>Projects</h3>
+          <p><strong>Comic Store</strong> - Modern comic storefront with immersive visuals, responsive layout, and smooth interactions.</p>
+          <p>GitHub: <a href="https://github.com/rajkumarnaredla/Portfolio/tree/main/comic%20store" target="_blank" rel="noopener">github.com/rajkumarnaredla/Portfolio/tree/main/comic store</a></p>
+          <p>Live: <a href="https://rajkumarnaredla.github.io/Comic-store/comic%20store/" target="_blank" rel="noopener">rajkumarnaredla.github.io/Comic-store/comic store</a></p>
+        </article>
+        <article id="contact-panel" class="info-panel" role="tabpanel" hidden>
+          <h3>Contact Details</h3>
+          <p>Email: rajkumarnaredla42@gmail.com</p>
+          <p>Phone: 9603460568</p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/rajkumar-naredla-920941324/" target="_blank" rel="noopener">linkedin.com/in/rajkumarnaredla</a></p>
+          <p>GitHub: <a href="https://github.com/rajkumarnaredla" target="_blank" rel="noopener">github.com/rajkumarnaredla</a></p>
+        </article>
+      </div>
+
+      <aside class="info-profile">
+        <img src="profile.jpg" alt="Rajkumar profile" class="mini-profile">
+        <h4>Rajkumar Naredla</h4>
+        <p>Frontend Developer</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="projects" class="section reveal">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card comic-card">
+        <img src="comic-store-logo.png" class="project-logo" alt="Comic Store logo">
+        <h3>Comic Store</h3>
+        <p>Modern comic storefront with immersive visuals, responsive layout, and smooth interactions.</p>
+        <div class="project-links">
+          <a class="project-link-btn" href="https://github.com/rajkumarnaredla/Portfolio/tree/main/comic%20store" target="_blank" rel="noopener">GitHub</a>
+          <a class="project-link-btn" href="https://rajkumarnaredla.github.io/Comic-store/comic%20store/" target="_blank" rel="noopener">Live Link</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section reveal">
+    <h2>Contact</h2>
+    <div class="contact-wrap">
+      <article class="contact-card glass">
+        <h3>Get In Touch</h3>
+        <p>Email: <a href="mailto:rajkumarnaredla42@gmail.com">rajkumarnaredla42@gmail.com</a></p>
+        <p>Phone: <a href="tel:9603460568">9603460568</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/rajkumar-naredla-920941324/" target="_blank" rel="noopener">linkedin.com/in/rajkumar-naredla-920941324</a></p>
+        <p>Use the form to send a message directly from here.</p>
+      </article>
+
+      <form id="contactForm" class="contact-form glass" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Project discussion" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+        <button type="submit" class="btn">Send Mail</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script (1).js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
