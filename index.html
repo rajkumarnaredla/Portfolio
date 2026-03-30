@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,58 +6,96 @@
   <title>Rajkumar | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="gradient-bg" aria-hidden="true"></div>
 
   <nav class="navbar">
-    <div class="logo">Rajkumar</div>
+    <div class="logo-wrap">
+      <span class="logo-mark">RN</span>
+      <div class="logo-copy">
+        <div class="logo">Rajkumar</div>
+        <small>Frontend Portfolio</small>
+      </div>
+    </div>
+
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#resume-info">Resume Info</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="true" title="Switch theme">
-      <span class="theme-icon" aria-hidden="true">🌙</span>
+
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="true" title="Switch theme">
+      <span class="theme-icon" aria-hidden="true">◐</span>
     </button>
   </nav>
 
   <section id="home" class="hero reveal">
-    <div class="hero-content glass">
-      <div class="hero-right">
-        <img src="profile.jpg" class="profile-img" alt="Rajkumar Naredla profile">
-      </div>
-      <div class="hero-left">
-        <h1>Rajkumar Naredla</h1>
+    <div class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">Frontend developer focused on clean, human-friendly web experiences</p>
+        <h1>Building polished interfaces with clarity, motion, and strong visual structure.</h1>
         <h2 class="typing"></h2>
-        <p>I’m a curious and passionate Frontend Developer fresher who genuinely enjoys building simple, clean, and user-friendly websites while learning something new every day.</p>
-        <div class="resume-actions">
+        <p class="hero-text">I’m Rajkumar Naredla, a frontend developer fresher who enjoys turning ideas into responsive websites that feel modern, easy to use, and carefully crafted.</p>
+
+        <div class="hero-actions">
           <a href="Raj kumar Resume (2).pdf" download class="btn">Download Resume</a>
-          <a href="Raj kumar Resume (2).pdf" target="_blank" rel="noopener" class="btn">View Resume</a>
+          <a href="Raj kumar Resume (2).pdf" target="_blank" rel="noopener" class="btn btn-secondary">View Resume</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <strong>01</strong>
+            <span>Featured portfolio project</span>
+          </div>
+          <div class="metric-card">
+            <strong>React</strong>
+            <span>Modern frontend learning path</span>
+          </div>
+          <div class="metric-card">
+            <strong>UI First</strong>
+            <span>Clean layout and interaction focus</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait-shell">
+          <div class="portrait-badge">Available for entry-level frontend roles</div>
+          <img src="profile-panther.png" class="profile-img" alt="Rajkumar Naredla profile">
+        </div>
+        <div class="spotlight-card">
+          <span>Current focus</span>
+          <p>Responsive UI, JavaScript fundamentals, React components, and portfolio-ready project presentation.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section id="resume-info" class="section reveal">
-    <h2>Resume Information</h2>
-    <div class="resume-layout glass">
+    <div class="section-heading">
+      <p class="section-kicker">Resume Info</p>
+      <h2>A quick snapshot of my background, skills, and project work.</h2>
+    </div>
+
+    <div class="resume-layout">
       <div class="info-icons" role="tablist" aria-label="Resume info tabs">
-        <button class="icon-tab active" data-target="about-panel" role="tab" aria-selected="true" title="About"><span>👤</span><small>About</small></button>
-        <button class="icon-tab" data-target="skills-panel" role="tab" aria-selected="false" title="Skills"><span>🛠</span><small>Skills</small></button>
-        <button class="icon-tab" data-target="education-panel" role="tab" aria-selected="false" title="Education"><span>🎓</span><small>Education</small></button>
-        <button class="icon-tab" data-target="projects-panel" role="tab" aria-selected="false" title="Projects"><span>🧩</span><small>Projects</small></button>
-        <button class="icon-tab" data-target="contact-panel" role="tab" aria-selected="false" title="Contact"><span>✉</span><small>Contact</small></button>
+        <button class="icon-tab active" data-target="about-panel" role="tab" aria-selected="true" title="About"><span>About</span><small>Profile</small></button>
+        <button class="icon-tab" data-target="skills-panel" role="tab" aria-selected="false" title="Skills"><span>Skills</span><small>Stack</small></button>
+        <button class="icon-tab" data-target="education-panel" role="tab" aria-selected="false" title="Education"><span>Study</span><small>Learning</small></button>
+        <button class="icon-tab" data-target="projects-panel" role="tab" aria-selected="false" title="Projects"><span>Work</span><small>Builds</small></button>
+        <button class="icon-tab" data-target="contact-panel" role="tab" aria-selected="false" title="Contact"><span>Reach</span><small>Contact</small></button>
       </div>
 
       <div class="info-content" aria-live="polite">
         <article id="about-panel" class="info-panel active" role="tabpanel">
           <h3>About Me</h3>
-          <p>Passionate Frontend Developer skilled in Java, React JS and modern web technologies. I build responsive and interactive applications with clean UI and smooth animations.</p>
+          <p>Passionate frontend developer with a growing foundation in Java, React JS, and modern web technologies. I like building interfaces that feel simple, responsive, and visually clear for real users.</p>
         </article>
+
         <article id="skills-panel" class="info-panel" role="tabpanel" hidden>
           <h3>Core Skills</h3>
           <div class="skills-logo-grid">
@@ -91,16 +129,22 @@
             </div>
           </div>
         </article>
+
         <article id="education-panel" class="info-panel" role="tabpanel" hidden>
           <h3>Education</h3>
-          <p>Bachelor's degree background in technology-focused studies with practical web development projects and hands-on software engineering work.</p>
+          <p>Bachelor's degree background in technology-focused studies with hands-on practice in web development, interface design, and project-based learning.</p>
         </article>
+
         <article id="projects-panel" class="info-panel" role="tabpanel" hidden>
           <h3>Projects</h3>
-          <p><strong>Comic Store</strong> - Modern comic storefront with immersive visuals, responsive layout, and smooth interactions.</p>
+          <p><strong>Comic Store</strong> is a modern comic storefront with immersive visuals, responsive layout, and smooth interactions that highlight product presentation.</p>
           <p>GitHub: <a href="https://github.com/rajkumarnaredla/Portfolio/tree/main/comic%20store" target="_blank" rel="noopener">github.com/rajkumarnaredla/Portfolio/tree/main/comic store</a></p>
           <p>Live: <a href="https://rajkumarnaredla.github.io/Comic-store/comic%20store/" target="_blank" rel="noopener">rajkumarnaredla.github.io/Comic-store/comic store</a></p>
+          <p><strong>Weather Report</strong> is a React weather dashboard with geolocation, current conditions, forecast insights, air-quality data, and historical weather charts powered by Open-Meteo APIs.</p>
+          <p>GitHub: <a href="https://github.com/rajkumarnaredla/Weather-report" target="_blank" rel="noopener">github.com/rajkumarnaredla/Weather-report</a></p>
+          <p>Live: <a href="https://weather-report-murex-seven.vercel.app/current-weather" target="_blank" rel="noopener">weather-report-murex-seven.vercel.app/current-weather</a></p>
         </article>
+
         <article id="contact-panel" class="info-panel" role="tabpanel" hidden>
           <h3>Contact Details</h3>
           <p>Email: rajkumarnaredla42@gmail.com</p>
@@ -111,40 +155,71 @@
       </div>
 
       <aside class="info-profile">
-        <img src="profile.jpg" alt="Rajkumar profile" class="mini-profile">
+        <p class="profile-label">Profile Card</p>
+        <img src="profile-panther.png" alt="Rajkumar profile" class="mini-profile">
         <h4>Rajkumar Naredla</h4>
         <p>Frontend Developer</p>
+        <div class="profile-tags">
+          <span>Responsive UI</span>
+          <span>React Basics</span>
+          <span>Clean Design</span>
+        </div>
       </aside>
     </div>
   </section>
 
   <section id="projects" class="section reveal">
-    <h2>Projects</h2>
+    <div class="section-heading">
+      <p class="section-kicker">Projects</p>
+      <h2>Selected work that shows how I approach layout, styling, and frontend presentation.</h2>
+    </div>
+
     <div class="projects">
-      <div class="card comic-card">
-        <img src="comic-store-logo.png" class="project-logo" alt="Comic Store logo">
+      <article class="project-card">
+        <div class="project-top">
+          <img src="comic-store-logo.png" class="project-logo" alt="Comic Store logo">
+          <span class="project-pill">Featured Build</span>
+        </div>
         <h3>Comic Store</h3>
-        <p>Modern comic storefront with immersive visuals, responsive layout, and smooth interactions.</p>
+        <p>Designed as a visually rich storefront with responsive sections, strong branding, and smoother browsing interactions for comic fans.</p>
         <div class="project-links">
           <a class="project-link-btn" href="https://github.com/rajkumarnaredla/Portfolio/tree/main/comic%20store" target="_blank" rel="noopener">GitHub</a>
           <a class="project-link-btn" href="https://rajkumarnaredla.github.io/Comic-store/comic%20store/" target="_blank" rel="noopener">Live Link</a>
         </div>
-      </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <div class="project-symbol" aria-hidden="true">WR</div>
+          <span class="project-pill">React Dashboard</span>
+        </div>
+        <h3>Weather Report</h3>
+        <p>Built with React and Open-Meteo APIs to show current weather, forecasts, air-quality data, and historical insights with a cleaner dashboard experience.</p>
+        <div class="project-links">
+          <a class="project-link-btn" href="https://github.com/rajkumarnaredla/Weather-report" target="_blank" rel="noopener">GitHub</a>
+          <a class="project-link-btn" href="https://weather-report-murex-seven.vercel.app/current-weather" target="_blank" rel="noopener">Live Link</a>
+        </div>
+      </article>
     </div>
   </section>
 
   <section id="contact" class="section reveal">
-    <h2>Contact</h2>
+    <div class="section-heading">
+      <p class="section-kicker">Contact</p>
+      <h2>Let’s connect for frontend opportunities, collaboration, or project discussions.</h2>
+    </div>
+
     <div class="contact-wrap">
-      <article class="contact-card glass">
-        <h3>Get In Touch</h3>
+      <article class="contact-card">
+        <p class="contact-label">Get In Touch</p>
+        <h3>Open to learning-focused roles and real-world frontend work.</h3>
         <p>Email: <a href="mailto:rajkumarnaredla42@gmail.com">rajkumarnaredla42@gmail.com</a></p>
         <p>Phone: <a href="tel:9603460568">9603460568</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/rajkumar-naredla-920941324/" target="_blank" rel="noopener">linkedin.com/in/rajkumar-naredla-920941324</a></p>
-        <p>Use the form to send a message directly from here.</p>
+        <p>Use the form to draft an email directly from this page.</p>
       </article>
 
-      <form id="contactForm" class="contact-form glass" novalidate>
+      <form id="contactForm" class="contact-form" novalidate>
         <label for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Your name" required>
 
@@ -165,13 +240,3 @@
   <script src="script (1).js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

@@ -83,28 +83,63 @@ function initThemeToggle() {
   const saved = localStorage.getItem("themeMode");
   if (saved === "light") {
     document.body.classList.add("light-mode");
-    if (icon) icon.textContent = "☀️";
+    if (icon) icon.textContent = "☀";
     toggle.setAttribute("aria-label", "Switch to dark mode");
     toggle.setAttribute("aria-pressed", "false");
   } else {
-    if (icon) icon.textContent = "🌙";
+    if (icon) icon.textContent = "◐";
     toggle.setAttribute("aria-label", "Switch to light mode");
   }
 
   toggle.addEventListener("click", () => {
     const lightMode = document.body.classList.toggle("light-mode");
     if (lightMode) {
-      if (icon) icon.textContent = "☀️";
+      if (icon) icon.textContent = "☀";
       toggle.setAttribute("aria-label", "Switch to dark mode");
       toggle.setAttribute("aria-pressed", "false");
       localStorage.setItem("themeMode", "light");
     } else {
-      if (icon) icon.textContent = "🌙";
+      if (icon) icon.textContent = "◐";
       toggle.setAttribute("aria-label", "Switch to light mode");
       toggle.setAttribute("aria-pressed", "true");
       localStorage.setItem("themeMode", "dark");
     }
   });
+}
+
+function initProfileScrollMotion() {
+  const portrait = document.querySelector(".portrait-shell");
+  if (!portrait) return;
+
+  let ticking = false;
+
+  function updatePortraitMotion() {
+    const rect = portrait.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || 1;
+    const viewportWidth = window.innerWidth || 1;
+    const centerY = rect.top + rect.height / 2;
+    const centerX = rect.left + rect.width / 2;
+    const offsetY = (centerY - viewportHeight / 2) / viewportHeight;
+    const offsetX = (centerX - viewportWidth / 2) / viewportWidth;
+    const rotateX = Math.max(-14, Math.min(14, offsetY * -20));
+    const rotateY = Math.max(-16, Math.min(16, offsetX * 18));
+    const shiftY = Math.max(-10, Math.min(10, offsetY * -18));
+
+    portrait.style.setProperty("--portrait-rotate-x", `${rotateX.toFixed(2)}deg`);
+    portrait.style.setProperty("--portrait-rotate-y", `${rotateY.toFixed(2)}deg`);
+    portrait.style.setProperty("--portrait-shift-y", `${shiftY.toFixed(2)}px`);
+    ticking = false;
+  }
+
+  function requestUpdate() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updatePortraitMotion);
+  }
+
+  requestUpdate();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -113,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initResumeTabs();
   initContactForm();
   initThemeToggle();
+  initProfileScrollMotion();
 
   window.addEventListener("scroll", revealOnScroll, { passive: true });
 });
